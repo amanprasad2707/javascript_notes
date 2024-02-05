@@ -35,3 +35,9 @@ console.log(anotherString.slice(7, 13)) // returns the word from the range of th
 console.log(anotherString.split(","))   // returns an array of the splitted word
 console.log(anotherString.substring(0, 15))  // returns the value from a range of indexes
 console.log(anotherString.toString())
+console.log(anotherString.lastIndexOf("World"))
+
+
+// ************************ String Functions ************************
+console.log(String.fromCharCode(65))
+console.log("A".charCodeAt())

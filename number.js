@@ -1,13 +1,13 @@
 const num = 300
 const balance = new Number(100)
-/*console.log(balance)
+console.log(balance)
 console.log(num)
 console.log(balance.toString())
 console.log(balance.toString().length)
 console.log(balance.toFixed(2))
 console.log(balance.toPrecision(4))
 const anotherNumber = 3200430434
-console.log(anotherNumber.toLocaleString('en-IN'))*/
+console.log(anotherNumber.toLocaleString('en-IN'))
 
 
 // ***************************** Maths ********************************

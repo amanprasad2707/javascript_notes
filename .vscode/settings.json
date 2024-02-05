@@ -1,0 +1,11 @@
+{
+  "html-to-css-autocompletion.triggerCharacters": true,
+  "html-to-css-autocompletion.autocompletionFilesScope": "linked-files",
+  "editor.tabSize": 2,
+  "material-icon-theme.activeIconPack": "vue_vuex",
+  "vscode-pets.theme": "none",
+  "material-icon-theme.folders.theme": "specific",
+  "editor.tokenColorCustomizations": {},
+  "editor.fontFamily": "Dank Mono",
+  "editor.fontLigatures": true
+}

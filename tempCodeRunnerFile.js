@@ -1,1 +1,1 @@
-const [key, value] in map
+people.reduce((accumulator, person) => accumulator + parseInt(person.salary), 0) / people.length

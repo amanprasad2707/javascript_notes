@@ -1,5 +1,5 @@
 // Primitive data types:
-// String, Number, Boolean, null, undefined, Sumbol, BigInt (these are call by value type)
+// String, Number, Boolean, null, undefined, Symbol, BigInt (these are call by value type)
 // Non primitive data types (referenced data types):
 // Array, Objects, Functions
 

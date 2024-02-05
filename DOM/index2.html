@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="color: white ; background-color: #313131;">
+    <div class="language">
+        <ul>
+            <li>javascript</li>
+            <li>typescript</li>
+        </ul>
+    </div>
+</body>
+<script>
+    // ****** function to add lists **********
+    function addLanguage(langName) {
+        const li = document.createElement("li")
+        li.innerHTML = langName
+        document.querySelector("ul").appendChild(li);
+    }
+    addLanguage("ruby")
+    function addLanguageOptimize(langName) {
+        const li = document.createElement("li")
+        const addText = document.createTextNode(langName)
+        li.appendChild(addText)
+        document.querySelector("ul").appendChild(li);
+    }
+    // ******* function to edit lists *******
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = 'Mojo'
+    const newLi = document.createElement("li");
+    newLi.textContent = 'mojo'
+    secondLang.replaceWith(newLi);
+
+    const firstLang = document.querySelector("li:nth-child(1)")
+    firstLang.outerHTML = '<li>C++</li>'
+
+    // ******* function to remove lists *******
+    const lastEle = document.querySelector('li:last-child');
+    lastEle.remove()
+
+</script>
+
+</html>

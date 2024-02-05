@@ -1,0 +1,1 @@
+'the promise is either resolved or rejected'

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Hello, Aman</h1>
+  <button id="stop">stop</button>
+  <button id="start">start</button>
+</body>
+<script>
+  // const sayHello = function () {
+  //   console.log("Hello!");
+  //   document.querySelector('h1').innerHTML = 'Hello World!';
+  // }
+  // const changeMe = setTimeout(sayHello, 4000);
+  // // setInterval(sayHello, 2000);
+  // document.getElementById('stop').addEventListener('click', () => {
+  //   console.log('stopped');
+  //   clearTimeout(changeMe);
+  // })
+
+  const sayDate = function (message) {
+    console.log(message + ' ' + Date.now())
+  }
+  const changeMe = setInterval(sayDate, 2000, "Date");
+  document.getElementById('stop').addEventListener('click', () => {
+    console.log('stopped');
+    clearInterval(changeMe);
+  })
+  document.getElementById('start').addEventListener('click', () => {
+    console.log('start');
+    const changeMe = setInterval(sayDate, 2000, "Date");
+
+  })
+</script>
+
+</html>

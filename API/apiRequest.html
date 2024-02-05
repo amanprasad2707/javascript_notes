@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #212121;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .card {
+    width: 600px;
+    height: 300px;
+    background-color: red;
+    border-radius: 20px;
+    /* display: flex;
+    justify-content: space-between; */
+    padding: 30px;
+  }
+
+  .avatar {
+    width: 200px;
+
+  }
+</style>
+
+<body>
+
+  <div class="card">
+    <div class="avatar">
+      <img class="avatar" src="" alt="avatar">
+    </div>
+    <div class="details">
+      <p class="username">Username: </p>
+      <p class="followers">Followers: </p>
+      <p class="following">Following: </p>
+      <p class="name">Name: </p>
+      <p class="accountCreated">Account created: </p>
+    </div>
+    <div class="inputSection">
+      <input type="text">
+      <button>click</button>
+    </div>
+  </div>
+</body>
+<script>
+  let requestUrl;
+  document.querySelector('button').addEventListener('click', function (e) {
+    let inputUsername = document.querySelector('input').value;
+    requestUrl = "https://api.github.com/users/" + inputUsername;
+    console.log(requestUrl);
+    // console.log(inputUsername)
+
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requestUrl);
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      // const data = this.responseText  // data type if string
+      const data = JSON.parse(this.responseText)  // data type if string
+      console.log(`Data type is: ${data}`);
+
+      if (xhr.readyState === 4) {
+        // console.log(data.followers);
+        document.querySelector('.followers').innerHTML += data.followers;
+        document.querySelector('.following').innerHTML += data.following;
+        document.querySelector('.username').innerHTML += data.login;
+        document.querySelector('img').setAttribute('src', data.avatar_url);
+        document.querySelector('.name').innerHTML += data.name;
+        const myDate = new Date(data.created_at).toLocaleDateString()
+        document.querySelector('.accountCreated').innerHTML += myDate
+      }
+    };
+    xhr.send();
+
+  })
+
+
+</script>
+
+</html>
